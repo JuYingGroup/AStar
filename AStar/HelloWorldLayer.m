@@ -41,11 +41,6 @@
         int cengs = 32;
         int renshu=6;
         CCArray *array = [[CCArray alloc] init];
-        array.
-        
-        for (int i =0 ;i<array.count;i++) {
-
-        }
         
         if(cengs%6==0)
         {

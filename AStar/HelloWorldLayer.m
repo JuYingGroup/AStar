@@ -1,117 +1,64 @@
-//
-//  HelloWorldLayer.m
-//  AStar
-//
-//  Created by 曹笛 on 13-6-28.
-//  Copyright __MyCompanyName__ 2013年. All rights reserved.
-//
 
-
-// Import the interfaces
 #import "HelloWorldLayer.h"
 
-// Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
 
 #pragma mark - HelloWorldLayer
 
-// HelloWorldLayer implementation
 @implementation HelloWorldLayer
 
-// Helper class method that creates a Scene with the HelloWorldLayer as the only child.
 +(CCScene *) scene
 {
-	// 'scene' is an autorelease object.
 	CCScene *scene = [CCScene node];
-	
-	// 'layer' is an autorelease object.
 	HelloWorldLayer *layer = [HelloWorldLayer node];
-	
-	// add layer as a child to scene
 	[scene addChild: layer];
-	
-	// return the scene
 	return scene;
 }
 
-// on "init" you need to initialize your instance
 -(id) init
 {
-	// always call "super" init
-	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super init]) ) {
-		
-		// create and initialize a Label
-		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:64];
+        CCSpriteBatchNode* batcnode = [CCSpriteBatchNode batchNodeWithFile:@"Icon.png" capacity:100];
+        [self addChild:batcnode];
+        for (int i=0; i<10; i++) {
+            for (int j=0; j<10; j++) {
+                //CCSprite* tIcon =[CCSprite spriteWithFile:@"Icon.png"];
+                CCSprite* tIcon =[CCSprite spriteWithTexture:batcnode.texture];
+                tIcon.position =ccp(80+i*60, 80+j*60);
+                [batcnode addChild:tIcon];
+            }
+        }
+        int ceng=5;
+        int dps = 0;
+        if(ceng>0)
+        {
+            ceng*=2;
+        }else{
+            ceng++;
+        }
+        dps=ceng*100;
+        
+        int cengs = 32;
+        int renshu=6;
+        CCArray *array = [[CCArray alloc] init];
+        array.
+        
+        for (int i =0 ;i<array.count;i++) {
 
-		// ask director for the window size
-		CGSize size = [[CCDirector sharedDirector] winSize];
-	
-		// position the label on the center of the screen
-		label.position =  ccp( size.width /2 , size.height/2 );
-		
-		// add the label as a child to this Layer
-		[self addChild: label];
-		
-		
-		
-		//
-		// Leaderboards and Achievements
-		//
-		
-		// Default font size will be 28 points.
-		[CCMenuItemFont setFontSize:28];
-		
-		// Achievement Menu Item using blocks
-		CCMenuItem *itemAchievement = [CCMenuItemFont itemWithString:@"Achievements" block:^(id sender) {
-			
-			
-			GKAchievementViewController *achivementViewController = [[GKAchievementViewController alloc] init];
-			achivementViewController.achievementDelegate = self;
-			
-			AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-			
-			[[app navController] presentModalViewController:achivementViewController animated:YES];
-			
-			[achivementViewController release];
-		}
-									   ];
-
-		// Leaderboard Menu Item using blocks
-		CCMenuItem *itemLeaderboard = [CCMenuItemFont itemWithString:@"Leaderboard" block:^(id sender) {
-			
-			
-			GKLeaderboardViewController *leaderboardViewController = [[GKLeaderboardViewController alloc] init];
-			leaderboardViewController.leaderboardDelegate = self;
-			
-			AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-			
-			[[app navController] presentModalViewController:leaderboardViewController animated:YES];
-			
-			[leaderboardViewController release];
-		}
-									   ];
-		
-		CCMenu *menu = [CCMenu menuWithItems:itemAchievement, itemLeaderboard, nil];
-		
-		[menu alignItemsHorizontallyWithPadding:20];
-		[menu setPosition:ccp( size.width/2, size.height/2 - 50)];
-		
-		// Add the menu to the layer
-		[self addChild:menu];
-
+        }
+        
+        if(cengs%6==0)
+        {
+            array=cengs/6;
+            renshu+=renshu;
+        }
+        CCLOG(@"%d",ceng);
 	}
 	return self;
 }
 
-// on "dealloc" you need to release all your retained objects
 - (void) dealloc
 {
-	// in case you have something to dealloc, do it in this method
-	// in this particular example nothing needs to be released.
-	// cocos2d will automatically release all the children (Label)
-	
-	// don't forget to call "super dealloc"
 	[super dealloc];
 }
 

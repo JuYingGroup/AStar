@@ -133,6 +133,9 @@
 		F447F815177D8610003FDBC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F447F814177D8610003FDBC1 /* AppDelegate.m */; };
 		F447F818177D8610003FDBC1 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F447F817177D8610003FDBC1 /* HelloWorldLayer.m */; };
 		F447F81B177D8610003FDBC1 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F447F81A177D8610003FDBC1 /* IntroLayer.m */; };
+		F447F827177D8A28003FDBC1 /* Astaritems.m in Sources */ = {isa = PBXBuildFile; fileRef = F447F826177D8A28003FDBC1 /* Astaritems.m */; };
+		F48C2E3C1781443000C8C60F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F48C2E3B1781443000C8C60F /* Default-568h@2x.png */; };
+		F4ED399F177D95290044F0E3 /* Astar.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ED399E177D95290044F0E3 /* Astar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -398,6 +401,11 @@
 		F447F817177D8610003FDBC1 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		F447F819177D8610003FDBC1 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		F447F81A177D8610003FDBC1 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		F447F825177D8A28003FDBC1 /* Astaritems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Astaritems.h; sourceTree = "<group>"; };
+		F447F826177D8A28003FDBC1 /* Astaritems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Astaritems.m; sourceTree = "<group>"; };
+		F48C2E3B1781443000C8C60F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F4ED399D177D95290044F0E3 /* Astar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Astar.h; sourceTree = "<group>"; };
+		F4ED399E177D95290044F0E3 /* Astar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Astar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,6 +431,8 @@
 		F447F67D177D860E003FDBC1 = {
 			isa = PBXGroup;
 			children = (
+				F48C2E3B1781443000C8C60F /* Default-568h@2x.png */,
+				F447F821177D89D0003FDBC1 /* AstarTEXT */,
 				F447F69B177D860E003FDBC1 /* AStar */,
 				F447F688177D860E003FDBC1 /* Frameworks */,
 				F447F687177D860E003FDBC1 /* Products */,
@@ -832,6 +842,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F447F821177D89D0003FDBC1 /* AstarTEXT */ = {
+			isa = PBXGroup;
+			children = (
+				F447F825177D8A28003FDBC1 /* Astaritems.h */,
+				F447F826177D8A28003FDBC1 /* Astaritems.m */,
+				F4ED399D177D95290044F0E3 /* Astar.h */,
+				F4ED399E177D95290044F0E3 /* Astar.m */,
+			);
+			name = AstarTEXT;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -895,6 +916,7 @@
 				F447F6B2177D860E003FDBC1 /* Icon@2x.png in Resources */,
 				F447F6B5177D860E003FDBC1 /* iTunesArtwork in Resources */,
 				F447F7F3177D8610003FDBC1 /* ChangeLog in Resources */,
+				F48C2E3C1781443000C8C60F /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,6 +1031,8 @@
 				F447F815177D8610003FDBC1 /* AppDelegate.m in Sources */,
 				F447F818177D8610003FDBC1 /* HelloWorldLayer.m in Sources */,
 				F447F81B177D8610003FDBC1 /* IntroLayer.m in Sources */,
+				F447F827177D8A28003FDBC1 /* Astaritems.m in Sources */,
+				F4ED399F177D95290044F0E3 /* Astar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1112,6 +1136,7 @@
 				F447F820177D8610003FDBC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
